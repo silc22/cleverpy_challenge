@@ -5,7 +5,7 @@ function Footer() {
    
     return (    
       <footer className="footer">
-        <ul className="footer__icons">
+        <ul className="footer__menu">
           <li >
               Telegram
           </li>

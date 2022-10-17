@@ -1,12 +1,12 @@
 .footer{
     width: 100%;
     height: var(--footer-height);
-    /* border: 1px solid rgba(255, 255, 255, 0.322); */
     display: flex;
     justify-content: center;
+    border-top: 1px solid white;
 }
 
-.footer__icons{
+.footer__menu{
     width: 50%;
     display: flex;
     flex-flow: row nowrap;
