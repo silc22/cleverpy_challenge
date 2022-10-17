@@ -1,36 +1,66 @@
-.seccion__posts{
+.seccion{
     width: 100%;
-    height: calc(100vh - var(--footer-height));
-    padding-top: var(--navbar-height);
+    height: calc(100% - var(--footer-height));
+    padding: var(--navbar-height) 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.seccion__container{
+    width: 100%;
+    height: 80vh;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    border-top: 1px solid white;
+}
+
+.seccion__posts{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-flow: column nowrap;
     justify-content: space-evenly;
-    align-items: flex-start;
-   
+    align-items: center;
 }
 
 .seccion__cards{
-    width: 600px;
-    height: 100%;
+    width: 100%;
+    min-height: 170px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    flex-flow: column nowrap;
-    overflow-y: scroll;
-    background: linear-gradient(42deg, rgba(233,233,233,0.2) 0%, rgba(255,255,255,0.3) 21%, rgba(255,255,255,0.2) 78%, rgba(233,233,233,0.2) 100%);
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+}
+
+.seccion__cards::-webkit-scrollbar{
+    background-color: rgba(233,233,233,0.1);
+}
+
+.seccion__cards::-webkit-scrollbar-button:single-button{
+    background-color:  rgba(233,233,233,0.5);
+    border-radius: 50%;
 }
 
 
+.seccion__cards::-webkit-scrollbar-thumb{
+ background-color:  rgba(233,233,233,0.5);
+ border: 1px solid white; 
+}
+
 .seccion__card{
-    margin: 5px;
-    padding: 5px;
-    width: 350px;
-    min-height: 100px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 150px;
+    max-height: 150px;
     border: 1px solid black;
 }
 
 .seccion__indivualCard{
-    min-height: 80vh;
+    min-height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
