@@ -1,27 +1,24 @@
 import "../styles/post.css"
-import { deleteCard } from "../store/actions/posts/postsActions"
-import { useDispatch, useSelector } from "react-redux";
+import Card from "./Card"
+import { useSelector } from "react-redux";
+
 
 
 function Post() {
-  const dispatch = useDispatch()
-  const {oneCard} = useSelector((state)=> state.post)
+    const {oneCard} = useSelector((state)=> state.post)
 
-  
+
 
 
     return (
       <>
-        {oneCard.map((element)=>(
-           <article className="card" key={element.id}>
-                  <p>{element.userId}</p>    
-                  <p>{element.title}</p>    
-                  <p>{element.body}</p>    
-            <button onClick={()=>dispatch(deleteCard(element.id))}>
-              eliminar card
-            </button>
-            </article>
-        ))}
+        {oneCard.length === 0 ?
+        <div className="card">
+          <p>Aun no has seleccionado ningun post</p>
+        </div>
+        :
+        <Card/>
+        }
       </>
     );
   }
