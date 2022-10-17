@@ -4,8 +4,19 @@ function Footer() {
     
    
     return (    
-      <footer className="footer__container">
-        FOOTER
+      <footer className="footer">
+        <ul className="footer__icons">
+          <li >
+              Telegram
+          </li>
+          <li >
+              Whatsapp
+          </li>
+          <li >
+              Github
+          </li>
+        </ul>
+        
       </footer>
      );
    }
