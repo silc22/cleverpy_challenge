@@ -1,5 +1,4 @@
 .footer__container{
-    width: 100%;
-    height: calc(100vh - 85vh - 60px);
+    height: var(--footer-height);
     background-color: yellow;
 }

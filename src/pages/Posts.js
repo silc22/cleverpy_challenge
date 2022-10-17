@@ -20,6 +20,7 @@ function Posts() {
    
     return (
      <section className="seccion__posts">
+      
       <div className="seccion__indivualCard">
         <Post />
       </div>
