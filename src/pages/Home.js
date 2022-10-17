@@ -1,10 +1,11 @@
 import { useState, React } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "../styles/home.css"
+
 
 function Home() {
   const [newUser, setNewUser] = useState ({name: ""})
-  
+  const navigate = useNavigate()
   
   const inputHandler = (e) => {
     setNewUser({
@@ -16,6 +17,9 @@ function Home() {
     e.preventDefault()
     if (newUser.name === "" || newUser.name.length > 10 || newUser.name.length < 3){
     alert('There are fields incomplete, please complete them.') 
+    }else{
+      localStorage.setItem("users", JSON.stringify(newUser))
+      navigate("/posts")
     }
 }
 
@@ -41,7 +45,7 @@ function Home() {
               type="text" 
               id="name" 
               name="name" 
-              onChange={inputHandler}/>
+              onChange={(e)=>inputHandler(e)}/>
 
               <Link 
               className="home__link"
