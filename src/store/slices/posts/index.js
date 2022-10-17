@@ -7,11 +7,10 @@ import { createSlice } from "@reduxjs/toolkit";
         cards: [],
         oneCard : [],
         deletedPost: []
-        
     },
     reducers: {
         fetchApi: (state, action) =>{
-            const deleted =JSON.parse(localStorage.getItem("deleted"))
+            const deleted = JSON.parse(localStorage.getItem("deleted"))
             if(deleted){
                 state.deletedPost = deleted
                 let filtered = action.payload.filter( card => !deleted.includes(card.id))
@@ -33,7 +32,7 @@ import { createSlice } from "@reduxjs/toolkit";
         showOne: (state, action) =>{
             let card = state.cards.filter((card) => card.id === action.payload)
             state.oneCard = card
-        }
+        },
         
         
     }
