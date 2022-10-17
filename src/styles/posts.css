@@ -1,28 +1,31 @@
 .seccion__posts{
     width: 100%;
-    min-height: 85vh;
+    height: calc(100vh - var(--footer-height));
+    padding-top: var(--navbar-height);
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    
+   
 }
 
 .seccion__cards{
-    width: 80%;
+    width: 600px;
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+    overflow-y: scroll;
+    background: linear-gradient(42deg, rgba(233,233,233,0.2) 0%, rgba(255,255,255,0.3) 21%, rgba(255,255,255,0.2) 78%, rgba(233,233,233,0.2) 100%);
 }
 
 
 .seccion__card{
     margin: 5px;
     padding: 5px;
-    width: 250px;
-    height: 200px;
-    overflow: hidden;
+    width: 350px;
+    min-height: 100px;
     border: 1px solid black;
 }
 

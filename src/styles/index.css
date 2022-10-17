@@ -25,7 +25,6 @@ body{
     min-width: 100%;
     min-height: 100%;
     font-family: 'Montserrat', sans-serif;
-
     background: rgb(210,102,188);
     background: linear-gradient(315deg, rgb(224, 174, 214) 0%, rgba(93,133,212,1) 100%);
 }
