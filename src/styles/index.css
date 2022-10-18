@@ -3,8 +3,8 @@
 :root {
     /* COLORS */
     --primary-light: #FFFFFF;
-    --secondary-light: #d47ca4;
-    --tertiary-light: #18D359;
+    --secondary-light: #e0aed6;
+    --tertiary-light: #5d85d4;
     --primary-dark: #1b1b1b;
     --secondary-dark: brown;
     --tertiary-dark: brown;
@@ -22,8 +22,7 @@
 }
 
 body{
-    min-width: 100%;
-    min-height: 100vh;
+    
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(315deg, rgb(224, 174, 214) 0%, rgba(93,133,212,1) 100%);
 }
