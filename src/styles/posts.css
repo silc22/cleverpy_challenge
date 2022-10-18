@@ -1,34 +1,59 @@
 .seccion{
     width: 100%;
-    height: calc(100% - var(--footer-height));
-    padding: var(--navbar-height) 0 0 0;
+    height: 100vh;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
+.seccion__dashboard{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    min-height: 80px;
+    padding: 0 30px;
+}
+
+.seccion__title{
+    font-family: 'Averia Serif Libre', cursive;
+    color: var(--primary-light);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+
+.seccion__image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: rgba(233,233,233, 1);
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
 .seccion__container{
-    width: 100%;
-    height: 80vh;
+    width: 70%;
+    height: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    border-top: 1px solid white;
+    padding-bottom: 10px;
 }
 
 .seccion__posts{
-    width: 80%;
-    height: 90%;
+    width:75%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 .seccion__cards{
     width: 100%;
-    min-height: 170px;
+    min-height: 250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,18 +62,21 @@
 }
 
 .seccion__cards::-webkit-scrollbar{
+    border-radius: 5px;
     background-color: rgba(233,233,233,0.1);
 }
 
 .seccion__cards::-webkit-scrollbar-button:single-button{
-    background-color:  rgba(233,233,233,0.5);
-    border-radius: 50%;
+    /* background-color:  rgba(233,233,233,0.5);
+    border-radius: 50%; */
+    display: none;
 }
 
 
 .seccion__cards::-webkit-scrollbar-thumb{
- background-color:  rgba(233,233,233,0.5);
- border: 1px solid white; 
+ background-color:  rgba(233,233,233, 0.8);
+ border-radius: 5px;
+ width: 40px;
 }
 
 .seccion__card{
@@ -60,9 +88,9 @@
 }
 
 .seccion__indivualCard{
-    min-height: 50vh;
+    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
