@@ -25,9 +25,11 @@
 }
 
 .menu__title{
+    font-size: 25px;
     flex: 3;
     font-family: 'Averia Serif Libre', cursive;
     color: var(--primary-light);
+    font-weight: 600;
 }
 
 .menu__list{ 
@@ -50,6 +52,7 @@
 
 .menu__item:hover, .menu__item--principal:hover{
     text-shadow: 0px 2px 8px rgba(255, 255, 255, 0.7);
+    transition: .3s;
 }
 
 
@@ -64,3 +67,16 @@
     color: var(--primary-light);
     text-decoration: none;
 }
+
+/* .menu__link--disable{
+    color: rgb(178, 178, 178);
+    text-decoration: none;
+} */
+
+/* .menu__item--disable{
+    text-transform:uppercase;
+    padding: 10px 30px 10px 0;
+    margin: 5px;
+    font-size: 14px;
+    border-bottom: 1px solid rgb(178, 178, 178);
+} */

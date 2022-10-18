@@ -3,16 +3,15 @@ import "../styles/navbar.css"
 
 function Navbar() {
 
- 
    
     return (   
       <nav className="menu">
 
         <div className="menu__container">
 
-          <h1 className="menu__title">
+          <p className="menu__title">
             .xSc.
-          </h1>
+          </p>
 
           <ul className="menu__list">
             
