@@ -1,0 +1,74 @@
+
+.home_form{
+    position:relative;
+    right: 50px;
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    color:  white;
+}
+
+
+.home__label {
+    padding-bottom: 10px;
+}
+
+
+.home__input, .home__select{
+    margin-bottom: 25px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(233,233,233,5);
+    border-radius: 5px 5px 0 0;
+    color: white;
+    padding: 2px;
+}
+
+.home__input:focus-visible, .home__select:focus-visible{
+    outline: none;
+    background-color:rgba(255, 255, 255, 0.2) ;
+    border-radius: 5px 5px 0 0;
+}
+
+.home__select:hover{
+   cursor: pointer;
+}
+
+.home__option{
+    background-color:var(--primary-light) ;
+    color: var(--secondary-light);
+}
+
+
+.home__button{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(233,233,233,0.3);
+    position: absolute;
+    width: 300px;
+    padding: 7px;
+    bottom: -30px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    backdrop-filter: blur(2px);
+    text-align: start;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+.home__button:visited, .home__button:active {
+    color: white;
+    border-radius: 5px;
+}
+
+.home__button:hover{
+    cursor: pointer;
+    box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+.home__link{
+    text-decoration: none;
+}
+
