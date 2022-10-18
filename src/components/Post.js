@@ -1,4 +1,4 @@
-import "../styles/post.css"
+import "../styles/cards.css"
 import Card from "./Card"
 import { useSelector } from "react-redux";
 
@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 
 function Post() {
     const {oneCard} = useSelector((state)=> state.post)
+    const user = JSON.parse(localStorage.getItem("users"))
 
 
 
@@ -13,9 +14,14 @@ function Post() {
     return (
       <>
         {oneCard.length === 0 ?
-        <div className="card">
-          <p>Aun no has seleccionado ningun post</p>
-        </div>
+        <article className="article__container">
+          <p className="article__massage--user">
+            {user.name}
+          </p>
+          <p className="article__massage">
+            hecha un vistazo al detalle de las últimas novedades!
+          </p>
+        </article>
         :
         <Card/>
         }
