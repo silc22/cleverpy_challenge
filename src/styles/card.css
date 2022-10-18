@@ -1,6 +1,8 @@
-.card{
+.article__card{
     width: 80%;
     height: 250px;
-    background-color: rgb(248, 248, 248);
+    background-color: rgba(248, 248, 248, 0.247);
     border: 1px solid blue;
 }
+
+

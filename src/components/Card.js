@@ -9,7 +9,7 @@ function Card() {
     return (    
         <>
         {oneCard.map((element)=>(
-           <article className="card" key={element.id}>
+           <article className="article__card" key={element.id}>
                 <p>{element.userId}</p>    
                 <p>{element.title}</p>    
                 <p>{element.body}</p>    
