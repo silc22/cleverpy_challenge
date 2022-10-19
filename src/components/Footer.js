@@ -1,4 +1,7 @@
 import "../styles/footer.css"
+import {BsTelegram} from "react-icons/bs"
+import {IoLogoWhatsapp} from "react-icons/io"
+import {AiFillGithub} from "react-icons/ai"
 
 function Footer() {
     
@@ -6,17 +9,16 @@ function Footer() {
     return (    
       <footer className="footer">
         <ul className="footer__menu">
-          <li >
-              Telegram
+          <li className="footer__icon">
+            <BsTelegram/>
           </li>
-          <li >
-              Whatsapp
+          <li className="footer__icon">
+              <IoLogoWhatsapp/>
           </li>
-          <li >
-              Github
+          <li className="footer__icon">
+              <AiFillGithub/>
           </li>
         </ul>
-        
       </footer>
      );
    }

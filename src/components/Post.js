@@ -1,4 +1,4 @@
-import "../styles/cards.css"
+import "../styles/post.css"
 import Card from "./Card"
 import { useSelector } from "react-redux";
 
@@ -12,7 +12,7 @@ function Post() {
 
 
     return (
-      <>
+      <div className="seccion__indivualCard">
         {oneCard.length === 0 ?
         <article className="article__container">
           <p className="article__massage--user">
@@ -25,7 +25,7 @@ function Post() {
         :
         <Card/>
         }
-      </>
+       </div>
     );
   }
   

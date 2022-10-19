@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { getAllPosts } from "../store/actions/posts/postsActions"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "../styles/posts.css"
 import Post from "../components/Post";
 import Sidebar from "../components/Sidebar";
@@ -9,16 +9,15 @@ import Cards from "../components/Cards";
 function Posts() {
    const dispatch = useDispatch()
    const user = JSON.parse(localStorage.getItem("users"))
-  
+   const {cards} = useSelector((state)=> state.post)
 
    useEffect(()=>{
       dispatch(getAllPosts())
    },[dispatch])
-
    
    
     return (
-      <section className="seccion">
+       <section className="seccion">
          {user ? 
          <>
          <div className="seccion__dashboard">
@@ -34,9 +33,7 @@ function Posts() {
          <div className="seccion__container">
             <Sidebar/>
             <div className="seccion__posts">
-               <div className="seccion__indivualCard">
                <Post />
-               </div>
                <Cards/>
             </div>
          </div>
