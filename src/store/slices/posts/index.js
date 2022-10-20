@@ -6,7 +6,7 @@ import { createSlice } from "@reduxjs/toolkit";
     initialState: {
         cards: [],
         oneCard : [],
-        deletedPost: []
+        deletedPost: [],
     },
     reducers: {
         fetchApi: (state, action) =>{
@@ -27,7 +27,7 @@ import { createSlice } from "@reduxjs/toolkit";
                 localStorage.setItem("deleted", JSON.stringify(state.deletedPost))
                 state.oneCard = []
             }
-
+            
         },
         showOne: (state, action) =>{
             let card = state.cards.filter((card) => card.id === action.payload)

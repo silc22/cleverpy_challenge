@@ -12,14 +12,14 @@ function Post() {
 
 
     return (
-      <div className="seccion__indivualCard">
+      <div className={ oneCard.length === 0 ? "seccion__noCard":"seccion__indivualCard"}>
         {oneCard.length === 0 ?
         <article className="article__container">
           <p className="article__massage--user">
             {user.name}
           </p>
           <p className="article__massage">
-            hecha un vistazo al detalle de las últimas novedades!
+            ¡ Hecha un vistazo al detalle de las últimas novedades !
           </p>
         </article>
         :

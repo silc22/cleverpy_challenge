@@ -1,14 +1,79 @@
-.article__container{
-    font-size: 20px;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 600;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+
+.seccion__cards{
     width: 100%;
-    padding: 0 20px;
-    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column nowrap;
+    overflow-y: scroll;
+    padding-left: 15px;
 }
+
+.seccion__cards::-webkit-scrollbar{
+    width: 15px;
+    border-radius: 5px;
+    background-color: rgba(115, 103, 103, 0.072);
+}
+
+.seccion__cards::-webkit-scrollbar-button:single-button{
+    display: none;
+}
+
+
+.seccion__cards::-webkit-scrollbar-thumb{
+    background-color:  rgba(255, 255, 255, 1);
+    border-radius: 3px;
+}
+
+.seccion__card{
+    width: 65%;
+    height: 150px;
+    font-size: 14px;
+    margin:10px;
+    padding: 10px 0px 10px 20px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.seccion__content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    width: 80%;
+    height: 100%;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.seccion__content--user{
+    align-self: flex-end;
+    color: rgb(138, 138, 138);
+    font-style: italic;
+}
+
+.seccion__content--title:first-letter, .seccion__content--user::first-letter {
+    text-transform: capitalize;
+}
+
+.seccion__button{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    right: calc(-25px / 2);
+    width: 28px;
+} 
+
+.seccion__button svg{
+    border-radius: 50%;
+    background-color: white;
+    color: #5E85D4;
+    font-size: 25px;   
+}
+
