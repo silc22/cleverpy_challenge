@@ -68,12 +68,13 @@
     position: relative;
     right: calc(-25px / 2);
     width: 28px;
+    cursor: pointer;
 } 
 
 .seccion__button svg{
     border-radius: 50%;
     background-color: white;
-    color: #5E85D4;
+    color: #272727;
     font-size: 25px;   
 }
 

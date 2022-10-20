@@ -54,7 +54,6 @@
     backdrop-filter: blur(2px);
     text-align: start;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
-
 }
 
 .home__button:visited, .home__button:active {

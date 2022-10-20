@@ -16,5 +16,12 @@
 }
 
 .footer__icon{
-    font-size: 25px;
+    font-size: 30px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3))
+}
+
+.footer__icon:hover{
+    text-shadow: 0px 2px 8px rgba(255, 255, 255, 0.7);
+    transition: .3s;
+    cursor: pointer;
 }

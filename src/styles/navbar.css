@@ -7,8 +7,6 @@
     position: fixed;
     top: 0;
     z-index: 10;
-    /* backdrop-filter: blur(20px); */
-    /* background-color: rgba(255, 255, 255, 0.05); */
 }
 
 
@@ -21,7 +19,6 @@
     align-items: center;  
     padding: 0 25px;
     font-weight: 400;
-    /* box-shadow: 0 5px 30px rgba(0, 0, 0, 0.09); */
 }
 
 .menu__title{

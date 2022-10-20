@@ -16,7 +16,7 @@ function Home() {
         <div className="home__container">
 
           <h2 className="home__title">
-            Qué <span>bueno</span> verte!
+            Qué <span className="home__title--span">bueno</span> verte!
           </h2>
 
           <Form/>

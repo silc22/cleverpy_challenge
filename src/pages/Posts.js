@@ -1,15 +1,16 @@
 import { useEffect } from "react";
 import { getAllPosts } from "../store/actions/posts/postsActions"
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import "../styles/posts.css"
 import Post from "../components/Post";
 import Sidebar from "../components/Sidebar";
 import Cards from "../components/Cards";
+import { useNavigate } from "react-router-dom";
 
 function Posts() {
+   const navigate = useNavigate()
    const dispatch = useDispatch()
    const user = JSON.parse(localStorage.getItem("users"))
-   const {cards} = useSelector((state)=> state.post)
 
    useEffect(()=>{
       dispatch(getAllPosts())
@@ -38,7 +39,17 @@ function Posts() {
             </div>
          </div>
          </>
-         :<p>debes ingresar tus datos primero para ver los posteos</p>}
+         :
+         <div className="seccion__empty">
+            <p className="seccion__message">
+               <span>Ups!</span>
+               Debes ingresar tus datos para ver el contenido.
+            </p>
+            <button className="seccion__back" onClick={()=>navigate("/")}>
+              Home
+            </button>
+         </div>
+         }
       </section>
     );
   }
