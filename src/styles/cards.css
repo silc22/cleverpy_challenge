@@ -41,6 +41,11 @@
     align-items: center; 
 }
 
+.seccion__card--background{
+    filter: brightness(51%);
+    background-color: rgba(0, 0, 0, 0.284);
+}
+
 .seccion__content{
     display: flex;
     align-items: flex-start;

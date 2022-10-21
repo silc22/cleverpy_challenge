@@ -1,19 +1,20 @@
 import { useState } from "react";
 import "../styles/card.css"
-import { deleteCard } from "../store/actions/posts/postsActions"
+import { deleteCard, openOneCard } from "../store/actions/posts/postsActions"
 import { useDispatch, useSelector } from "react-redux";
 import { AiFillHeart, AiOutlineUserAdd, AiOutlineUser , AiOutlineRetweet, AiOutlineHeart } from 'react-icons/ai';
 import { BiMessageRounded}  from 'react-icons/bi';
 import { MdDeleteOutline }  from 'react-icons/md';
-import { FiMoreHorizontal}  from 'react-icons/fi';
+import { SlClose}  from 'react-icons/sl';
 
 
-function Card() {
-    const [like, setLike] = useState(false)
-    const [friends, setFriends] = useState(false)
-    const [post, setPost] = useState(false)
-    const dispatch = useDispatch()
+function Card({estado, cambiarEstado})  {
     const {oneCard} = useSelector((state)=> state.post)
+    const dispatch = useDispatch()  
+    const [ like, setLike] = useState(false)
+    const [ friends, setFriends] = useState(false)
+    const [ post, setPost] = useState(false)
+    
    
     const getLike = () =>{
       setLike(!like)
@@ -24,14 +25,20 @@ function Card() {
     const getRepost = () =>{
       setPost(!post)
     }
+  
+    const handlerchange = () =>{
+      cambiarEstado(!estado)
+    }
+
+  
 
 
     return (    
         <>
         {oneCard.map((element)=>(
-           <article className="article__card" key={element.id}>
-                <div className="article__container--options">
-                  <FiMoreHorizontal/>
+           <article className={estado? "article__card" : "article__card--none"} key={element.id}>
+                <div className="article__container--options"  >
+                  <SlClose onClick={()=>handlerchange()} />
                 </div>
                 <div className="article__container--data">
                   <div className="article__data">
@@ -54,7 +61,7 @@ function Card() {
 
                 <div  className="article__container--buttons">
                   <button className="article__button--deleted" onClick={()=>dispatch(deleteCard(element.id))} >
-                     <MdDeleteOutline/>
+                     <MdDeleteOutline onClick={()=>handlerchange()}/>
                   </button>
                   <button className="article__button--comment" >
                     <BiMessageRounded/>

@@ -17,4 +17,3 @@ export const showOneCard = (id) => (dispatch) =>{
     dispatch(showOne(id))
 }
 
-

@@ -32,9 +32,9 @@ import { createSlice } from "@reduxjs/toolkit";
         showOne: (state, action) =>{
             let card = state.cards.filter((card) => card.id === action.payload)
             state.oneCard = card
-        },
-        
-        
+        }
+
+
     }
 })
 

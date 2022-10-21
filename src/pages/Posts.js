@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { getAllPosts } from "../store/actions/posts/postsActions"
 import { useDispatch } from "react-redux";
 import "../styles/posts.css"
-import Post from "../components/Post";
 import Sidebar from "../components/Sidebar";
 import Cards from "../components/Cards";
 import { useNavigate } from "react-router-dom";
@@ -19,6 +18,7 @@ function Posts() {
    
     return (
        <section className="seccion">
+
          {user ? 
          <>
          <div className="seccion__dashboard">
@@ -34,7 +34,6 @@ function Posts() {
          <div className="seccion__container">
             <Sidebar/>
             <div className="seccion__posts">
-               <Post />
                <Cards/>
             </div>
          </div>
