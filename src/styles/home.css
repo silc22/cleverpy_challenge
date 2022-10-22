@@ -2,6 +2,7 @@
     width: 100%;
     height: calc(100vh - var(--footer-height));
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -56,5 +57,24 @@
 		backdrop-filter: hue-rotate(100deg);
 	}
 }
+
+
+@media only screen and (max-width: 800px) {
+
+    .home__container{
+        width: auto;
+        height: 70%;
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+
+    .home__title{
+        position: unset;
+        font-size: 45px;
+    }
+
+    
+}
+
 
 

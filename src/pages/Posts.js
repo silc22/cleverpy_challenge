@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getAllPosts } from "../store/actions/posts/postsActions"
 import { useDispatch } from "react-redux";
 import "../styles/posts.css"
 import Sidebar from "../components/Sidebar";
 import Cards from "../components/Cards";
+import HideSideBar from "../components/HideSideBar";
 import { useNavigate } from "react-router-dom";
+
 
 function Posts() {
    const navigate = useNavigate()
@@ -15,13 +17,31 @@ function Posts() {
       dispatch(getAllPosts())
    },[dispatch])
    
-   
-    return (
-       <section className="seccion">
+   const [windowSize, setWindowSize] = useState(getWindowSize());
 
+   useEffect(() => {
+     function handleWindowResize() {
+       setWindowSize(getWindowSize());
+     }
+     window.addEventListener('resize', handleWindowResize);
+     return () => {
+       window.removeEventListener('resize', handleWindowResize);
+     }
+   }, [])
+
+   function getWindowSize() {
+      const {innerWidth, innerHeight} = window;
+      return {innerWidth, innerHeight};
+    }   
+   //  console.log(windowSize.innerWidth)
+ 
+    return (
+       <section className="seccion" id="seccion">
+        
          {user ? 
          <>
          <div className="seccion__dashboard">
+            {window.innerWidth < 780? <HideSideBar/> : ""}
             <h3 className="seccion__title">
                .xSc.
             </h3>
@@ -32,9 +52,12 @@ function Posts() {
             />
          </div>
          <div className="seccion__container">
-            <Sidebar/>
+            {window.innerWidth < 780? "" : <Sidebar/> }
+           
             <div className="seccion__posts">
+              
                <Cards/>
+               
             </div>
          </div>
          </>

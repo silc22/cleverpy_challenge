@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/card.css"
-import { deleteCard, openOneCard } from "../store/actions/posts/postsActions"
+import { deleteCard } from "../store/actions/posts/postsActions"
 import { useDispatch, useSelector } from "react-redux";
 import { AiFillHeart, AiOutlineUserAdd, AiOutlineUser , AiOutlineRetweet, AiOutlineHeart } from 'react-icons/ai';
 import { BiMessageRounded}  from 'react-icons/bi';
@@ -26,7 +26,7 @@ function Card({estado, cambiarEstado})  {
       setPost(!post)
     }
   
-    const handlerchange = () =>{
+    const handlerChange = () =>{
       cambiarEstado(!estado)
     }
 
@@ -38,7 +38,7 @@ function Card({estado, cambiarEstado})  {
         {oneCard.map((element)=>(
            <article className={estado? "article__card" : "article__card--none"} key={element.id}>
                 <div className="article__container--options"  >
-                  <SlClose onClick={()=>handlerchange()} />
+                  <SlClose onClick={()=>handlerChange()} />
                 </div>
                 <div className="article__container--data">
                   <div className="article__data">
@@ -61,7 +61,7 @@ function Card({estado, cambiarEstado})  {
 
                 <div  className="article__container--buttons">
                   <button className="article__button--deleted" onClick={()=>dispatch(deleteCard(element.id))} >
-                     <MdDeleteOutline onClick={()=>handlerchange()}/>
+                     <MdDeleteOutline onClick={()=>handlerChange()}/>
                   </button>
                   <button className="article__button--comment" >
                     <BiMessageRounded/>

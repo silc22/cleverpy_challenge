@@ -1,5 +1,5 @@
 
-.home_form{
+.home__form{
     position:relative;
     right: 50px;
     height: 80%;
@@ -71,3 +71,16 @@
     text-decoration: none;
 }
 
+@media only screen and (max-width: 800px) {
+
+    .home__form{
+        position: unset;
+        flex-flow: column nowrap;
+        height: unset;
+    }
+    .home__button{
+        position: unset;
+        width: auto;
+        text-align: center;
+    }
+}
