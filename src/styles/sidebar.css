@@ -10,20 +10,10 @@
     box-shadow: 0px 5px 10px rgba(255, 255, 255, .2) inset ;
 }
 
-
 .sidebar__list{
     height: 100%;
     list-style: none;
     padding: 10px;
-}
-
-
-.sidebar__item{
-    text-transform:uppercase;
-    padding: 10px;
-    font-size: 14px;
-    color: var(--primary-light);
-    cursor: pointer;
 }
 
 .sidebar__link{
@@ -47,12 +37,20 @@
     
 }
 
+.sidebar__item{
+    text-transform:uppercase;
+    padding: 10px;
+    font-size: 14px;
+    color: var(--primary-light);
+    cursor: pointer;
+}
+
 .sidebar__item:hover{
     text-shadow: 0px 2px 8px rgba(255, 255, 255, 0.7);
     transition: .3s;
 }
 
-
+/* MEDIA QUERYS */
 @media only screen and (max-width: 1200px) {
     .sidebar{
         width: 30%;

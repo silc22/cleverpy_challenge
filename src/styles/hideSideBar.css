@@ -1,3 +1,10 @@
+.hide__icon{
+    color:white;
+    font-size: 27px;
+    margin: 10px 12px 0 12px;
+    align-self: flex-end;
+}
+
 .hide__container{
     width: 40%;
     height: 100vh;
@@ -14,14 +21,7 @@
 }
 
 
-
-.hide__icon{
-    color:white;
-    font-size: 27px;
-    margin: 10px 12px 0 12px;
-    align-self: flex-end;
-}
- 
+/* MEDIA QUERYS */
 @media only screen and (min-width: 482px ) and (max-width: 767px){
     .hide__container{
         width: 40%;

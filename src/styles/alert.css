@@ -19,6 +19,8 @@
     color: rgb(42, 146, 34)
 }
 
+
+/* MEDIA QUERYS */
 @media only screen and (max-width: 800px) {
 
     .alert{

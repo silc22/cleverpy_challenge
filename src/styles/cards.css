@@ -11,7 +11,7 @@
 }
 
 
-
+/* SCROLLBAR */
 .seccion__cards::-webkit-scrollbar{
     width: 15px;
     border-radius: 5px;
@@ -22,11 +22,11 @@
     display: none;
 }
 
-
 .seccion__cards::-webkit-scrollbar-thumb{
     background-color:  rgba(255, 255, 255, 1);
     border-radius: 3px;
 }
+
 
 .seccion__card{
     width: 340px;
@@ -40,10 +40,7 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-
 }
-
-
 
 .seccion__card--background{
     filter: brightness(51%);
@@ -58,6 +55,18 @@
     align-items: center;
 }
 
+.seccion__button{
+    background-color: transparent;
+    border: none;
+    width: 28px;
+    cursor: pointer;
+} 
+
+.seccion__button svg{
+    border-radius: 50%;
+    color: #000000;
+    font-size: 25px;  
+}
 
 
 .seccion__content--data{
@@ -71,6 +80,11 @@
     overflow: hidden;
 }
 
+
+.seccion__user--title:first-letter, .seccion__user--id:first-letter {
+    text-transform: capitalize;
+}
+
 .seccion__user--id{
     align-self: flex-end;
     color: rgb(138, 138, 138);
@@ -78,22 +92,7 @@
 }
 
 
-.seccion__user--title:first-letter, .seccion__user--id:first-letter {
-    text-transform: capitalize;
-}
-
-.seccion__button{
-    background-color: transparent;
-    border: none;
-    width: 28px;
-    cursor: pointer;
-} 
-
-.seccion__button svg{
-    border-radius: 50%;
-    color: #000000;
-    font-size: 25px;  
-}
+/* MEDIA QUERYS */
 
 @media only screen and (max-width: 490px) {
     .seccion__card{

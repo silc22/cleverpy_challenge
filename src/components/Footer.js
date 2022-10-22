@@ -1,7 +1,7 @@
-import "../styles/footer.css"
 import {BsTelegram} from "react-icons/bs"
 import {IoLogoWhatsapp} from "react-icons/io"
 import {AiFillGithub} from "react-icons/ai"
+import "../styles/footer.css"
 
 function Footer() {
     

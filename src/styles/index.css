@@ -14,7 +14,6 @@
     --navbar-height: 60px;
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +21,6 @@
 }
 
 body{
-    
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(315deg, rgb(224, 174, 214) 0%, rgba(93,133,212,1) 100%);
 }

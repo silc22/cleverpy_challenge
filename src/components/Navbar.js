@@ -20,6 +20,7 @@ function Navbar() {
                 Home
               </Link>
             </li>
+            
             <li className="menu__item--principal">
               <Link to="/posts" className="menu__link">
                 Posts

@@ -6,11 +6,11 @@ import "../styles/home.css"
 
 
 function Home() {
- 
 
    return (
     <>  
       <Navbar/>
+
       <main className="home">
 
         <div className="home__container">
@@ -24,6 +24,7 @@ function Home() {
         </div>
       
       </main>
+      
       <Footer/>
     </>
     );
