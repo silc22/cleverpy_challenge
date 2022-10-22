@@ -23,7 +23,7 @@
 
     .alert{
         right: calc(50% - 250px /2 );
-        bottom: 50px;
+        top: 80px;
         width: 250px;
         height: 90px;
         display: flex;
@@ -31,3 +31,4 @@
         align-items: center;
     }
 }
+
